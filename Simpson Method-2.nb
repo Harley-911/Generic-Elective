@@ -1,0 +1,48 @@
+Notebook[{Cell[
+CellGroupData[{Cell[
+BoxData[{RowBox[{"Clear","[",RowBox[{"a",","," ","b",","," ","n",","," ","h",","," ","y",","," ","f",","," ","i",","," ","x",","," ","in",","," ","Sn",","," ","a",","," ","b",","," ","sumodd",","," ","sumeven"}],"]"}],"\n",RowBox[
+{"a"," ","="," ",RowBox[{"Input","[","\"Enter the left end point : \"","]"}]}],"\n",RowBox[
+{"b"," ","="," ",RowBox[{"Input","[","\"Enter the right end point : \"","]"}]}],"\n",RowBox[
+{RowBox[{"n"," ","="," ",RowBox[{"Input","[","\"Enter the number of subintervals to be formed : \"","]"}]}],";"}],"\n",RowBox[
+{RowBox[{"h"," ","="," ",RowBox[{RowBox[{"(",RowBox[{"b"," ","-"," ","a"}],")"}]," ","/"," ","n"}]}],";"}],"\n",RowBox[
+{RowBox[{"y"," ","="," ",RowBox[{"Table","[",RowBox[{RowBox[{"a"," ","+"," ",RowBox[
+{"i"," ","h"}]}],","," ",RowBox[{"{",RowBox[{"i",","," ","1",","," ","n"}],"}"}]}],"]"}]}],";"}],"\n",RowBox[
+{RowBox[{RowBox[{"f","[","x","]"}]," ",":="," ",RowBox[{RowBox[{"E","^","x"}]," ","-"," ","x"}]}],";"}],"\n",RowBox[
+{RowBox[{"sumodd"," ","="," ","0"}],";"}],"\n",RowBox[{RowBox[{"sumeven"," ","="," ","0"}],";"}],"\n",RowBox[
+{RowBox[{"For","[",RowBox[{RowBox[{"i"," ","="," ","1"}],","," ",RowBox[{"i"," ","<"," ","n"}],","," ",RowBox[
+{"i"," ","+="," ","2"}],","," ",RowBox[{"sumodd"," ","+="," ",RowBox[{RowBox[{"4"," ",RowBox[
+{"f","[","x","]"}]}]," ","/."," ",RowBox[{"x"," ","\[Rule]"," ",RowBox[{"y","\[LeftDoubleBracket]","i","\[RightDoubleBracket]"}]}]}]}]}],"]"}],";"}],"\n",RowBox[
+{RowBox[{"For","[",RowBox[{RowBox[{"i"," ","="," ","2"}],","," ",RowBox[{"i"," ","<"," ","n"}],","," ",RowBox[
+{"i"," ","+="," ","2"}],","," ",RowBox[{"sumeven"," ","+="," ",RowBox[{RowBox[{"2"," ",RowBox[
+{"f","[","x","]"}]}]," ","/."," ",RowBox[{"x"," ","\[Rule]"," ",RowBox[{"y","\[LeftDoubleBracket]","i","\[RightDoubleBracket]"}]}]}]}]}],"]"}],";"}],"\n",RowBox[
+{RowBox[{"Sn"," ","="," ",RowBox[{RowBox[{"(",RowBox[{"h"," ","/"," ","3"}],")"}]," ","*"," ",RowBox[
+{"(",RowBox[{RowBox[{"(",RowBox[{RowBox[{"f","[","x","]"}]," ","/."," ",RowBox[{"x"," ","\[Rule]"," ","a"}]}],")"}]," ","+"," ",RowBox[
+{"N","[","sumodd","]"}]," ","+"," ",RowBox[{"N","[","sumeven","]"}]," ","+"," ",RowBox[
+{"(",RowBox[{RowBox[{"f","[","x","]"}]," ","/."," ",RowBox[{"x"," ","\[Rule]"," ","b"}]}],")"}]}],")"}]}]}],";"}],"\n",RowBox[
+{"Print","[",RowBox[{"\"For n=\"",","," ","n",","," ","\", Simpson estimate is : \"",","," ","Sn"}],"]"}],"\n",RowBox[
+{"in"," ","="," ",RowBox[{"Integrate","[",RowBox[{RowBox[{RowBox[{"E","^","x"}]," ","-"," ","x"}],","," ",RowBox[
+{"{",RowBox[{"x",","," ","0",","," ","9"}],"}"}]}],"]"}]}],"\n",RowBox[{"Print","[",RowBox[
+{"\"True value is \"",","," ","in"}],"]"}],"\n",RowBox[{"Print","[",RowBox[{"\"Absolute error is \"",","," ",RowBox[
+{"Abs","[",RowBox[{"Sn"," ","-"," ","in"}],"]"}]}],"]"}]}],"Input",CellLabel -> "In[17]:= ",
+ExpressionUUID -> "dfd4d532-9b85-46a2-99e8-4c156d35621b"],Cell[
+BoxData["0",StandardForm],
+"Output",CellLabel -> "Out[18]= ",ExpressionUUID -> "145c3151-45af-4cd8-8583-d210475160b7"],Cell[
+BoxData[
+"9",StandardForm],"Output",CellLabel -> "Out[19]= ",ExpressionUUID -> "dda0d95a-cc0d-4059-a7f1-60c8b66cf464"],Cell[
+BoxData[
+InterpretationBox[RowBox[{"\"For n=\"","\[InvisibleSpace]","20","\[InvisibleSpace]","\", Simpson estimate is : \"","\[InvisibleSpace]","8063.386114573094`"}],
+SequenceForm["For n=",20,", Simpson estimate is : ",8063.386114573094`],Editable -> False],
+StandardForm],"Print",ExpressionUUID -> "6cc3449a-0f11-4ecb-9ccd-8280c51ee8c9"],Cell[
+BoxData[
+RowBox[{RowBox[{"-",FractionBox["83","2"]}],"+",SuperscriptBox["\[ExponentialE]",
+"9"]}],StandardForm],"Output",CellLabel -> "Out[30]= ",ExpressionUUID -> "535b83b1-735d-4651-83d8-f56cf024d801"],Cell[
+BoxData[
+InterpretationBox[RowBox[{"\"True value is \"","\[InvisibleSpace]",RowBox[{RowBox[
+{"-",FractionBox["83","2"]}],"+",SuperscriptBox["\[ExponentialE]","9"]}]}],SequenceForm[
+"True value is ",Plus[Rational[-83,2],Power[E,9]]],Editable -> False],StandardForm],
+"Print",ExpressionUUID -> "7ca68b4b-3d66-485d-9d31-a4ade60ce09c"],Cell[
+BoxData[InterpretationBox[
+RowBox[{"\"Absolute error is \"","\[InvisibleSpace]","1.8021869977101233`"}],SequenceForm[
+"Absolute error is ",1.8021869977101233`],Editable -> False],StandardForm],"Print",
+ExpressionUUID -> "7c302084-3d01-4014-9b0b-b6c3bb7d7251"]},Open],ExpressionUUID -> "6f945314-c7c4-48c6-93ab-a4963f9a4f23"]},
+StyleDefinitions -> "Default.nb",FrontEndVersion -> "15. for Wolfram Cloud 1.77.1 (August 27, 2026)"]

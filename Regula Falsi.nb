@@ -1,0 +1,72 @@
+Notebook[{Cell[
+BoxData[{RowBox[{RowBox[{RowBox[{"f","[","x_","]"}]," ",":="," ",RowBox[
+{RowBox[{"x","^","3"}],"+",RowBox[{"4",RowBox[{"x","^","2"}]}],"-","10"}]}],";"}],"\n",RowBox[
+{RowBox[{"RegulaFalsi","[",RowBox[{"a0_",","," ","b0_",","," ","m_"}],"]"}]," ",":="," ",RowBox[
+{"Module","[",RowBox[{RowBox[{"{","}"}],","," ",RowBox[{RowBox[{"a"," ","="," ",RowBox[
+{"N","[","a0","]"}]}],";","\n",RowBox[{"b"," ","="," ",RowBox[{"N","[","b0","]"}]}],";"," ",RowBox[
+{"c"," ","="," ",RowBox[{RowBox[{"(",RowBox[{RowBox[{"af","[","b","]"}],"-",RowBox[
+{"bf","[","a","]"}]}],")"}],"/",RowBox[{"(",RowBox[{RowBox[{"f","[","b","]"}],"-",RowBox[
+{"f","[","a","]"}]}],")"}]}]}],";"," ",RowBox[{"k"," ","="," ","0"}],";","\n",RowBox[
+{"While","[",RowBox[{RowBox[{"k"," ","<"," ","m"}],","," ",RowBox[{RowBox[{"If","[",RowBox[
+{RowBox[{RowBox[{"Sign","[",RowBox[{"f","[","b","]"}],"]"}]," ","\[Equal]"," ",RowBox[
+{"Sign","[",RowBox[{"f","[","c","]"}],"]"}]}],","," ",RowBox[{"b"," ","="," ","c"}],","," ",RowBox[
+{RowBox[{"a"," ","="," ","c"}],";"}]}],"]"}],";","\n",RowBox[{"c"," ","="," ",RowBox[
+{RowBox[{"(",RowBox[{RowBox[{"af","[","b","]"}],"-",RowBox[{"bf","[","a","]"}]}],")"}],"/",RowBox[
+{"(",RowBox[{RowBox[{"f","[","b","]"}],"-",RowBox[{"f","[","a","]"}]}],")"}]}]}],";"," ",RowBox[
+{"k"," ","="," ",RowBox[{"k","+","1"}]}],";"}]}],"]"}],";","\n",RowBox[{"Print","[",RowBox[
+{"\"c= \"",","," ",RowBox[{"NumberForm","[",RowBox[{"c",","," ","18"}],"]"}]}],"]"}],";","\n",RowBox[
+{"Print","[",RowBox[{"\"f[c]= \"",","," ",RowBox[{"NumberForm","[",RowBox[{RowBox[
+{"f","[","c","]"}],","," ","18"}],"]"}]}],"]"}],";"}]}],"]"}]}],"\n",RowBox[{"RegulaFalsi","[",RowBox[
+{"1",","," ","2",","," ","30"}],"]"}]}],"Input",CellLabel -> "In[7]:= ",ExpressionUUID -> "2c46c17c-91fc-42f8-94ff-d03d46353965"],Cell[
+BoxData[
+TemplateBox[{"SetDelayed","write","\"Tag \\!\\(\\*TagBox[\\\"List\\\", Short[#1, 5] & ]\\) in \\!\\(\\*TagBox[RowBox[{RowBox[{\\\"{\\\", RowBox[{\\\"1\\\", \\\",\\\", \\\"3\\\", \\\",\\\", \\\"2\\\", \\\",\\\", \\\"5\\\", \\\",\\\", \\\"10\\\"}], \\\"}\\\"}], \\\"[\\\", \\\"x_\\\", \\\"]\\\"}], Short[#1, 5] & ]\\) is Protected.\"",2,7,2,23539044832372403600,"Local"},
+"MessageTemplate",BaseStyle -> "MSG"],StandardForm],"MSG","Message",ExpressionUUID -> "74dfc8e3-a240-40cd-9c37-cca83c841c64"],Cell[
+BoxData[
+InterpretationBox[RowBox[{"\"c= \"","\[InvisibleSpace]",TagBox[FractionBox[RowBox[
+{RowBox[{"af","[",InterpretationBox[StyleBox["\"2.\"",ShowStringCharacters -> False],
+2.`,AutoDelete -> True],"]"}],"-",RowBox[{"bf","[",InterpretationBox[StyleBox["\"1.\"",
+ShowStringCharacters -> False],1.`,AutoDelete -> True],"]"}]}],RowBox[{RowBox[{"-",RowBox[
+{RowBox[{"{",RowBox[{InterpretationBox[StyleBox["\"1\"",ShowStringCharacters -> False],
+1,Editable -> False],",",InterpretationBox[StyleBox["\"3\"",ShowStringCharacters -> False],
+3,Editable -> False],",",InterpretationBox[StyleBox["\"2\"",ShowStringCharacters -> False],
+2,Editable -> False],",",InterpretationBox[StyleBox["\"5\"",ShowStringCharacters -> False],
+5,Editable -> False],",",InterpretationBox[StyleBox["\"10\"",ShowStringCharacters -> False],
+10,Editable -> False]}],"}"}],"[",InterpretationBox[StyleBox["\"1.\"",ShowStringCharacters -> False],
+1.`,AutoDelete -> True],"]"}]}],"+",RowBox[{RowBox[{"{",RowBox[{InterpretationBox[
+StyleBox["\"1\"",ShowStringCharacters -> False],1,Editable -> False],",",InterpretationBox[
+StyleBox["\"3\"",ShowStringCharacters -> False],3,Editable -> False],",",InterpretationBox[
+StyleBox["\"2\"",ShowStringCharacters -> False],2,Editable -> False],",",InterpretationBox[
+StyleBox["\"5\"",ShowStringCharacters -> False],5,Editable -> False],",",InterpretationBox[
+StyleBox["\"10\"",ShowStringCharacters -> False],10,Editable -> False]}],"}"}],"[",InterpretationBox[
+StyleBox["\"2.\"",ShowStringCharacters -> False],2.`,AutoDelete -> True],"]"}]}]],
+Function[NumberForm[Slot[1],18]]]}],SequenceForm["c= ",NumberForm[Times[Plus[af[2.`],
+Times[-1,bf[1.`]]],Power[Plus[Times[-1,{1,3,2,5,10}[1.`]],{1,3,2,5,10}[2.`]],-1]],
+18]],Editable -> False],StandardForm],"Print",ExpressionUUID -> "c2fb11f1-0e56-4348-b39a-7832e7ce1555"],Cell[
+BoxData[
+InterpretationBox[RowBox[{"\"f[c]= \"","\[InvisibleSpace]",TagBox[RowBox[{RowBox[
+{"{",RowBox[{InterpretationBox[StyleBox["\"1\"",ShowStringCharacters -> False],1,
+Editable -> False],",",InterpretationBox[StyleBox["\"3\"",ShowStringCharacters -> False],
+3,Editable -> False],",",InterpretationBox[StyleBox["\"2\"",ShowStringCharacters -> False],
+2,Editable -> False],",",InterpretationBox[StyleBox["\"5\"",ShowStringCharacters -> False],
+5,Editable -> False],",",InterpretationBox[StyleBox["\"10\"",ShowStringCharacters -> False],
+10,Editable -> False]}],"}"}],"[",FractionBox[RowBox[{RowBox[{"af","[",InterpretationBox[
+StyleBox["\"2.\"",ShowStringCharacters -> False],2.`,AutoDelete -> True],"]"}],"-",RowBox[
+{"bf","[",InterpretationBox[StyleBox["\"1.\"",ShowStringCharacters -> False],1.`,
+AutoDelete -> True],"]"}]}],RowBox[{RowBox[{"-",RowBox[{RowBox[{"{",RowBox[{InterpretationBox[
+StyleBox["\"1\"",ShowStringCharacters -> False],1,Editable -> False],",",InterpretationBox[
+StyleBox["\"3\"",ShowStringCharacters -> False],3,Editable -> False],",",InterpretationBox[
+StyleBox["\"2\"",ShowStringCharacters -> False],2,Editable -> False],",",InterpretationBox[
+StyleBox["\"5\"",ShowStringCharacters -> False],5,Editable -> False],",",InterpretationBox[
+StyleBox["\"10\"",ShowStringCharacters -> False],10,Editable -> False]}],"}"}],"[",InterpretationBox[
+StyleBox["\"1.\"",ShowStringCharacters -> False],1.`,AutoDelete -> True],"]"}]}],"+",RowBox[
+{RowBox[{"{",RowBox[{InterpretationBox[StyleBox["\"1\"",ShowStringCharacters -> False],
+1,Editable -> False],",",InterpretationBox[StyleBox["\"3\"",ShowStringCharacters -> False],
+3,Editable -> False],",",InterpretationBox[StyleBox["\"2\"",ShowStringCharacters -> False],
+2,Editable -> False],",",InterpretationBox[StyleBox["\"5\"",ShowStringCharacters -> False],
+5,Editable -> False],",",InterpretationBox[StyleBox["\"10\"",ShowStringCharacters -> False],
+10,Editable -> False]}],"}"}],"[",InterpretationBox[StyleBox["\"2.\"",ShowStringCharacters -> False],
+2.`,AutoDelete -> True],"]"}]}]],"]"}],Function[NumberForm[Slot[1],18]]]}],SequenceForm[
+"f[c]= ",NumberForm[{1,3,2,5,10}[Times[Plus[af[2.`],Times[-1,bf[1.`]]],Power[Plus[
+Times[-1,{1,3,2,5,10}[1.`]],{1,3,2,5,10}[2.`]],-1]]],18]],Editable -> False],StandardForm],
+"Print",ExpressionUUID -> "6d8cc2e2-b57f-407e-ba0e-928b5b40af58"]},StyleDefinitions -> "Default.nb",
+FrontEndVersion -> "15. for Wolfram Cloud 1.77.1 (August 27, 2026)"]

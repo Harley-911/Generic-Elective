@@ -1,0 +1,45 @@
+Notebook[{Cell[
+CellGroupData[{Cell[
+BoxData[{RowBox[{"Clear","[",RowBox[{"a",","," ","b",","," ","n",","," ","h",","," ","y",","," ","f",","," ","i",","," ","x",","," ","in",","," ","Sn",","," ","a",","," ","b",","," ","sumodd",","," ","sumeven"}],"]"}],"\n",RowBox[
+{"a"," ","="," ",RowBox[{"Input","[","\"Enter the left end point : \"","]"}]}],"\n",RowBox[
+{"b"," ","="," ",RowBox[{"Input","[","\"Enter the right end point : \"","]"}]}],"\n",RowBox[
+{RowBox[{"n"," ","="," ",RowBox[{"Input","[","\"Enter the number of subintervals to be formed : \"","]"}]}],";"}],"\n",RowBox[
+{RowBox[{"h"," ","="," ",RowBox[{RowBox[{"(",RowBox[{"b"," ","-"," ","a"}],")"}]," ","/"," ","n"}]}],";"}],"\n",RowBox[
+{RowBox[{"y"," ","="," ",RowBox[{"Table","[",RowBox[{RowBox[{"a"," ","+"," ",RowBox[
+{"i"," ","h"}]}],","," ",RowBox[{"{",RowBox[{"i",","," ","1",","," ","n"}],"}"}]}],"]"}]}],";"}],"\n",RowBox[
+{RowBox[{RowBox[{"f","[","x","]"}]," ",":="," ",RowBox[{"Cos","[","x","]"}]}],";"}],"\n",RowBox[
+{RowBox[{"sumodd"," ","="," ","0"}],";"}],"\n",RowBox[{RowBox[{"sumeven"," ","="," ","0"}],";"}],"\n",RowBox[
+{RowBox[{"For","[",RowBox[{RowBox[{"i"," ","="," ","1"}],","," ",RowBox[{"i"," ","<"," ","n"}],","," ",RowBox[
+{"i"," ","+="," ","2"}],","," ",RowBox[{"sumodd"," ","+="," ",RowBox[{RowBox[{"4"," ",RowBox[
+{"f","[","x","]"}]}]," ","/."," ",RowBox[{"x"," ","\[Rule]"," ",RowBox[{"y","\[LeftDoubleBracket]","i","\[RightDoubleBracket]"}]}]}]}]}],"]"}],";"}],"\n",RowBox[
+{RowBox[{"For","[",RowBox[{RowBox[{"i"," ","="," ","2"}],","," ",RowBox[{"i"," ","<"," ","n"}],","," ",RowBox[
+{"i"," ","+="," ","2"}],","," ",RowBox[{"sumeven"," ","+="," ",RowBox[{RowBox[{"2"," ",RowBox[
+{"f","[","x","]"}]}]," ","/."," ",RowBox[{"x"," ","\[Rule]"," ",RowBox[{"y","\[LeftDoubleBracket]","i","\[RightDoubleBracket]"}]}]}]}]}],"]"}],";"}],"\n",RowBox[
+{RowBox[{"Sn"," ","="," ",RowBox[{RowBox[{"(",RowBox[{"h"," ","/"," ","3"}],")"}]," ","*"," ",RowBox[
+{"(",RowBox[{RowBox[{"(",RowBox[{RowBox[{"f","[","x","]"}]," ","/."," ",RowBox[{"x"," ","\[Rule]"," ","a"}]}],")"}]," ","+"," ",RowBox[
+{"N","[","sumodd","]"}]," ","+"," ",RowBox[{"N","[","sumeven","]"}]," ","+"," ",RowBox[
+{"(",RowBox[{RowBox[{"f","[","x","]"}]," ","/."," ",RowBox[{"x"," ","\[Rule]"," ","b"}]}],")"}]}],")"}]}]}],";"}],"\n",RowBox[
+{"Print","[",RowBox[{"\"For n=\"",","," ","n",","," ","\", Simpson estimate is : \"",","," ","Sn"}],"]"}],"\n",RowBox[
+{"in"," ","="," ",RowBox[{"Integrate","[",RowBox[{RowBox[{"Cos","[","x","]"}],","," ",RowBox[
+{"{",RowBox[{"x",","," ","0",","," ",RowBox[{"2"," ","*"," ","Pi"}]}],"}"}]}],"]"}]}],"\n",RowBox[
+{"Print","[",RowBox[{"\"True value is \"",","," ","in"}],"]"}],"\n",RowBox[{"Print","[",RowBox[
+{"\"Absolute error is \"",","," ",RowBox[{"Abs","[",RowBox[{"Sn"," ","-"," ","in"}],"]"}]}],"]"}]}],
+"Input",CellLabel -> "In[33]:= ",ExpressionUUID -> "dfd4d532-9b85-46a2-99e8-4c156d35621b"],Cell[
+BoxData[
+"0",StandardForm],"Output",CellLabel -> "Out[34]= ",ExpressionUUID -> "8e5843cd-33fb-459c-810a-59da17ad2cce"],Cell[
+BoxData[
+RowBox[{"2"," ","\[Pi]"}],StandardForm],"Output",CellLabel -> "Out[35]= ",ExpressionUUID -> "c18c362e-b498-4dd0-9ae4-3086026740f3"],Cell[
+BoxData[
+InterpretationBox[RowBox[{"\"For n=\"","\[InvisibleSpace]","15","\[InvisibleSpace]","\", Simpson estimate is : \"","\[InvisibleSpace]",RowBox[
+{"-","0.13962634015954642`"}]}],SequenceForm["For n=",15,", Simpson estimate is : ",
+-0.13962634015954642`],Editable -> False],StandardForm],"Print",ExpressionUUID -> "e76d1563-86e0-4cf8-b48e-59de49e6e79f"],Cell[
+BoxData[
+"0",StandardForm],"Output",CellLabel -> "Out[46]= ",ExpressionUUID -> "b35474b7-f27d-42de-8735-76e8024ccfc5"],Cell[
+BoxData[
+InterpretationBox[RowBox[{"\"True value is \"","\[InvisibleSpace]","0"}],SequenceForm[
+"True value is ",0],Editable -> False],StandardForm],"Print",ExpressionUUID -> "6d1451e7-32fa-4de6-8825-fa52fcd3e3ef"],Cell[
+BoxData[
+InterpretationBox[RowBox[{"\"Absolute error is \"","\[InvisibleSpace]","0.13962634015954642`"}],
+SequenceForm["Absolute error is ",0.13962634015954642`],Editable -> False],StandardForm],
+"Print",ExpressionUUID -> "f5b94b95-aa64-433e-ad76-ef92e267fa59"]},Open],ExpressionUUID -> "983b9b92-55dc-4af0-a6b8-060abed8db90"]},
+StyleDefinitions -> "Default.nb",FrontEndVersion -> "15. for Wolfram Cloud 1.77.1 (August 27, 2026)"]

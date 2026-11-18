@@ -1,0 +1,29 @@
+Notebook[{Cell[
+CellGroupData[{Cell[
+BoxData[{RowBox[{RowBox[{RowBox[{"f","[",RowBox[
+{"x_",","," ","y_"}],"]"}]," ",":="," ",RowBox[{"x"," ","+"," ",RowBox[{"y","^","2"}]}]}],";"}],"\n",RowBox[
+{RowBox[{"a"," ","="," ","0"}],";"}],"\n",RowBox[{RowBox[{RowBox[{"y","[","a","]"}]," ","="," ","1"}],";"}],"\n",RowBox[
+{RowBox[{"h"," ",":="," ","0.2"}],";"}],"\n",RowBox[{RowBox[{RowBox[{"x","[","n_","]"}]," ",":="," ",RowBox[
+{"a"," ","+"," ",RowBox[{"n"," ","*"," ","h"}]}]}],";"}],"\n",RowBox[{RowBox[{"k1"," ","="," ",RowBox[
+{"f","[",RowBox[{RowBox[{"x","[","n","]"}],","," ",RowBox[{"y","[","n","]"}]}],"]"}]}],";"}],"\n",RowBox[
+{RowBox[{"k2"," ","="," ",RowBox[{"f","[",RowBox[{RowBox[{RowBox[{"x","[","n","]"}]," ","+"," ","h"}],","," ",RowBox[
+{RowBox[{"y","[","n","]"}]," ","+"," ",RowBox[{"k1"," ","*"," ","h"}]}]}],"]"}]}],";"}],"\n",RowBox[
+{RowBox[{"Do","[",RowBox[{RowBox[{RowBox[{"y","[",RowBox[{"n"," ","+"," ","1"}],"]"}]," ","="," ",RowBox[
+{RowBox[{"y","[","n","]"}]," ","+"," ",RowBox[{"h"," ","*"," ",RowBox[{"(",RowBox[
+{RowBox[{"(",RowBox[{"k1"," ","+"," ","k2"}],")"}]," ","/"," ","2"}],")"}]}]}]}],","," ",RowBox[
+{"{",RowBox[{"n",","," ","0",","," ","8"}],"}"}]}],"]"}],";"}],"\n",RowBox[{"Print","[",RowBox[
+{"\" n \"",","," ","\" x[n] \"",","," ","\" y[n] \""}],"]"}],"\n",RowBox[{"TableForm","[",RowBox[
+{"Table","[",RowBox[{RowBox[{"{",RowBox[{"n",","," ","\" \"",","," ",RowBox[{"N","[",RowBox[
+{RowBox[{"x","[","n","]"}],","," ","3"}],"]"}],","," ","\" \"",","," ",RowBox[{"N","[",RowBox[
+{RowBox[{"y","[","n","]"}],","," ","3"}],"]"}]}],"}"}],","," ",RowBox[{"{",RowBox[
+{"n",","," ","0",","," ","8"}],"}"}]}],"]"}],"]"}]}],"Input",CellLabel -> "In[21]:= ",
+ExpressionUUID -> "d2655a83-d912-4d1f-9bfe-8fadd18ac136"],Cell[
+BoxData[InterpretationBox[
+RowBox[{"\" n \"","\[InvisibleSpace]","\" x[n] \"","\[InvisibleSpace]","\" y[n] \""}],
+SequenceForm[" n "," x[n] "," y[n] "],Editable -> False],StandardForm],"Print",ExpressionUUID -> "e7b53138-8a6b-47ba-b9b4-c1102e0beb63"],Cell[
+BoxData[
+TagBox[GridBox[{{"0","\" \"","0.`","\" \"","1.`3."},{"1","\" \"","0.2`","\" \"","1.264`"},{"2","\" \"","0.4`","\" \"","1.747357553393664`"},{"3","\" \"","0.6000000000000001`","\" \"","2.747072299437209`"},{"4","\" \"","0.8`","\" \"","5.55695995469485`"},{"5","\" \"","1.`","\" \"","22.969096726792884`"},{"6","\" \"","1.2000000000000002`","\" \"","1731.929383567785`"},{"7","\" \"","1.4000000000000001`","\" \"","3.6198338974124`*^10"},{"8","\" \"","1.6`","\" \"","6.867751333052327`*^39"}},
+RowSpacings -> 1,ColumnSpacings -> 3,RowAlignments -> Baseline,ColumnAlignments -> Left],
+Function[BoxForm`e$,TableForm[BoxForm`e$]]],StandardForm],"Output",CellLabel -> "Out[30]//TableForm= ",
+ExpressionUUID -> "2059cc93-8334-4c94-9c3c-6b3da0f6a837"]},Open],ExpressionUUID -> "cac8bd87-ea15-4c05-8d4a-17294108b799"]},
+StyleDefinitions -> "Default.nb",FrontEndVersion -> "15. for Wolfram Cloud 1.77.1 (August 27, 2026)"]

@@ -1,0 +1,36 @@
+Notebook[{Cell[
+CellGroupData[{Cell[
+BoxData[{RowBox[{RowBox[{RowBox[{"f","[",RowBox[
+{"x_",","," ","y_"}],"]"}]," ",":="," ",RowBox[{"1"," ","+"," ",RowBox[{"y","/","x"}]}]}],";"}],"\n",RowBox[
+{RowBox[{"a"," ","="," ","1"}],";"}],"\n",RowBox[{RowBox[{"b"," ","="," ","6"}],";"}],"\n",RowBox[
+{RowBox[{"h"," ","="," ","1"}],";"}],"\n",RowBox[{RowBox[{"\[Alpha]"," ","="," ","1"}],";"}],"\n",RowBox[
+{RowBox[{"n"," ","="," ",RowBox[{RowBox[{"(",RowBox[{"b"," ","-"," ","a"}],")"}]," ","/"," ","h"}]}],";"}],"\n",RowBox[
+{RowBox[{"x"," ","="," ",RowBox[{"N","[",RowBox[{"Table","[",RowBox[{RowBox[{"a"," ","+"," ",RowBox[
+{"i"," ","h"}]}],","," ",RowBox[{"{",RowBox[{"i",","," ","0",","," ","n"}],"}"}]}],"]"}],"]"}]}],";"}],"\n",RowBox[
+{RowBox[{"w"," ","="," ",RowBox[{"N","[",RowBox[{"Table","[",RowBox[{"0",","," ",RowBox[
+{"{",RowBox[{"i",","," ","0",","," ","n"}],"}"}]}],"]"}],"]"}]}],";"}],"\n",RowBox[
+{RowBox[{RowBox[{"w","\[LeftDoubleBracket]","1","\[RightDoubleBracket]"}]," ","="," ",RowBox[
+{"N","[","\[Alpha]","]"}]}],";"}],"\n",RowBox[{RowBox[{"OutputDetails"," ","="," ",RowBox[
+{"{",RowBox[{"{",RowBox[{"0",","," ",RowBox[{"x","\[LeftDoubleBracket]","1","\[RightDoubleBracket]"}],","," ",RowBox[
+{"w","\[LeftDoubleBracket]","1","\[RightDoubleBracket]"}]}],"}"}],"}"}]}],";"}],"\n",RowBox[
+{"For","[",RowBox[{RowBox[{"i"," ","="," ","1"}],","," ",RowBox[{"i"," ","\[LessEqual]"," ","n"}],","," ",RowBox[
+{"i","++"}],","," ",RowBox[{RowBox[{RowBox[{"w","\[LeftDoubleBracket]",RowBox[{"i"," ","+"," ","1"}],"\[RightDoubleBracket]"}]," ","="," ",RowBox[
+{RowBox[{"w","\[LeftDoubleBracket]","i","\[RightDoubleBracket]"}]," ","+"," ",RowBox[
+{"h"," ","*",RowBox[{"f","[",RowBox[{RowBox[{"x","\[LeftDoubleBracket]","i","\[RightDoubleBracket]"}],","," ",RowBox[
+{"w","\[LeftDoubleBracket]","i","\[RightDoubleBracket]"}]}],"]"}]}]}]}],";","\n",RowBox[
+{"OutputDetails"," ","="," ",RowBox[{"Append","[",RowBox[{"OutputDetails",","," ",RowBox[
+{"{",RowBox[{"i",","," ",RowBox[{"N","[",RowBox[{"x","\[LeftDoubleBracket]",RowBox[
+{"i"," ","+"," ","1"}],"\[RightDoubleBracket]"}],"]"}],","," ",RowBox[{"N","[",RowBox[
+{"w","\[LeftDoubleBracket]",RowBox[{"i"," ","+"," ","1"}],"\[RightDoubleBracket]"}],"]"}]}],"}"}]}],"]"}]}]}]}]," ","]"}],"\n",RowBox[
+{"Print","[",RowBox[{"TableForm","[",RowBox[{"OutputDetails",","," ",RowBox[{"TableHeadings"," ","\[Rule]"," ",RowBox[
+{"{",RowBox[{"None",","," ",RowBox[{"{",RowBox[{"\"i\"",","," ","\"xi\"",","," ","\"wi+1\""}],"}"}]}],"}"}]}]}],"]"}],"]"}]}],
+"Input",CellLabel -> "In[65]:= ",ExpressionUUID -> "8be113b2-3ed6-4567-9b55-3fcc14274fa8"],Cell[
+BoxData[
+TagBox[TagBox[GridBox[{{TagBox["\"i\"",HoldForm],TagBox["\"xi\"",HoldForm],TagBox[
+"\"wi+1\"",HoldForm]},{"0","1.`","1.`"},{"1","2.`","3.`"},{"2","3.`","5.5`"},{"3","4.`","8.333333333333332`"},{"4","5.`","11.416666666666664`"},{"5","6.`","14.699999999999998`"}},
+RowSpacings -> 1,ColumnSpacings -> 3,RowAlignments -> Baseline,ColumnAlignments -> Left,
+GridBoxDividers -> {"Columns" -> {{False}},"Rows" -> {False,True,{False},False}},
+ColumnAlignments -> Left],{None,OutputFormsDump`HeadedColumns}],Function[BoxForm`e$,
+TableForm[BoxForm`e$,TableHeadings -> {None,{"i","xi","wi+1"}}]]],StandardForm],"Print",
+ExpressionUUID -> "db132cf8-6717-464f-a83c-690f805992a3"]},Open],ExpressionUUID -> "58eb453f-340d-4d78-abb9-09d4f2dcd643"]},
+StyleDefinitions -> "Default.nb",FrontEndVersion -> "15. for Wolfram Cloud 1.77.1 (August 27, 2026)"]
